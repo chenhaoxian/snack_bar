@@ -1,0 +1,44 @@
+.text {
+  margin-top: 100rpx;
+  text-align:center;
+  color: #404040;       
+  font-size: 32rpx;        
+}
+
+.text-height{
+  line-height: 1.5; 
+}
+
+.upload {
+    margin-top: 30rpx; 
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 400rpx; 
+  height: 300rpx;
+  padding: 0;
+}
+
+.upload-pic{
+  width: 400rpx;  
+   height: 300rpx;  
+ } 
+
+.nickName{
+  margin-top: 240rpx; 
+  display: flex;
+  justify-content: center;
+}
+
+.text1{
+  font-size: 32rpx;
+  color: #404040;
+}
+
+.inputNickName{
+  border:0;
+  border-bottom:2px solid #404040;
+  width: 320rpx;
+  margin-left: 6px; 
+  margin-top: -3px;
+}
+

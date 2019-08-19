@@ -1,0 +1,17 @@
+[[source]]
+url = "https://mirrors.aliyun.com/pypi/simple/"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+face-recognition = "*"
+requests = "*"
+flask = "*"
+opencv-python = "*"
+pymongo = "*"
+pycryptodome = "*"
+configparser = "*"
+gunicorn = "*"
+redis = "*"
+
+[dev-packages]

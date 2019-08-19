@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/picture/picture",
+    "pages/order/order",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundColor": "#eee",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "iSnackBar",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#404040",
+    "selectedColor": "#1a8cff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/home-blue.png",
+        "iconPath": "images/home-gray.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/picture-blue.png",
+        "iconPath": "images/picture-gray.png",
+        "pagePath": "pages/picture/picture",
+        "text": "上传照片"
+      },
+      {
+        "selectedIconPath": "images/order-blue.png",
+        "iconPath": "images/order-gray.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      }
+    ]
+  }
+}

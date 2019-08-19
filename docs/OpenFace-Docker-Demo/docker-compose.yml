@@ -1,0 +1,11 @@
+version: "2"
+services:
+  openface:
+    #image: bamos/openface:latest
+    image: intdocker.cargosmart.com/ita/openface:latest
+    tty: true
+    container_name: openface
+    ports:
+      - "9000:9000/tcp"
+      - "8000:8000/tcp"
+    command: /bin/bash -lc "/root/openface/demos/web/start-servers.sh"

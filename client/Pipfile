@@ -1,0 +1,23 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+face-recognition = "*"
+requests = "*"
+opencv-python = "*"
+sip = "*"
+"pyqt5" = "*"
+redis = "*"
+coverage = "*"
+pillow = "*"
+scikit-image = "*"
+pyzbar = "*"
+
+
+[dev-packages]
+

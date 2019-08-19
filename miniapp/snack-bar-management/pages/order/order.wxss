@@ -1,0 +1,108 @@
+.order-box {
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin: 15rpx 20rpx;
+  box-shadow: 0 1px 1px 1px #ccc;
+  border-radius: 6rpx;
+}
+
+.order-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  color: #404040;
+  height: 66rpx;
+  line-height: 66rpx;
+}
+
+.order-header-time {
+  font-size: 22rpx;
+  color: #a6a6a6;
+  display: flex;
+  justify-content: space-between;
+  line-height: 66rpx;
+}
+
+.order-item {
+  background: #fafaf5;
+  height: 72rpx;
+  padding: 0 20rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8rpx;
+}
+
+.order-location {
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: middle;
+  margin-right: 5rpx;
+}
+
+.prod-name {
+  font-size: 28rpx;
+  color: #000;
+  float: left;
+  line-height: 72rpx;
+}
+
+.prod-amount {
+  font-size: 24rpx;
+  color: #808080;
+  display: inline-block;
+  margin-left: 32rpx;
+}
+
+.prod-price {
+  line-height: 72rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.order-total {
+  font-size: 22rpx;
+  color: #404040;
+  display: flex;
+  justify-content: flex-end;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 20rpx;
+}
+
+.total-price {
+  font-size: 32rpx;
+  color: #eb5c15;
+  font-weight: bold;
+  margin-left: 3px;
+  line-height: 84rpx;
+}
+
+.pay-button {
+  margin-left: 10px;
+  margin-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 25px;
+  width: 60px;
+  font-size: 10px;
+}
+
+.notFound{
+margin-top: 300rpx;
+display: flex;
+justify-content: center;
+}
+
+.notFoundImage{
+  width: 400rpx;
+  height: 300rpx;
+}
+
+.text2{
+  color: #CCC;       
+  font-size: 28rpx;  
+  text-align:center;
+}

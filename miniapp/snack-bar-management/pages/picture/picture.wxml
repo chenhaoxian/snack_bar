@@ -1,0 +1,25 @@
+<view wx:if="{{userInfo.nickName}}">
+
+ <view class="nickName">
+    <view class="text1">输入昵称:</view>
+    <view class="inputNickName">
+      <input bindinput="customizedNickName" value="{{customizedNickName}}" auto-focus/>
+    </view>
+  </view>
+  
+  <view class="text">
+    <view>
+      <text class="text-height">请点击上传本人正面五官清晰的大头照</text>
+    </view>
+    <view>
+      <text class="text-height">（用于人脸识别）</text>
+    </view>
+  </view>
+
+   <form bindsubmit="saveFormId1" report-submit="true"> 
+    <button formType="submit" class='upload' bindtap='uploadUserImage'>  
+      <image src="/images/upload.png" class="upload-pic" ></image>
+    </button>  
+   </form> 
+ 
+</view>

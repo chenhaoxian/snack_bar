@@ -1,0 +1,10 @@
+#docker build  -f Dockerfile-server -t server-app:latest .
+FROM server-app-base:latest
+MAINTAINER Stark Xiao <stark.xiao@cargsmart.com>
+
+WORKDIR /app
+COPY ./server .
+
+RUN cd /app/ && \
+    ls && \
+    pipenv install --system

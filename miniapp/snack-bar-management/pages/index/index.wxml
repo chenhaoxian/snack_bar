@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:if='{{!userInfo.nickName}}' class='auth-btn'>
+  点击授权获取用户信息
+</button>
+
+<image wx:if="{{userInfo.nickName}}" src='/images/bg.png' class='index-bg'></image>
+<view wx:if="{{userInfo.nickName}}" class="index-container">
+  <text class="wlc-name">Hi, {{userInfo.nickName}} ^_^</text>
+  <view class="wlc-msg">欢迎光临 iSnackBar~</view>
+
+  <!-- Lucky Draw  -->
+  <view class="container-out">
+    <view class="circle" wx:for="{{circleList}}" wx:key="circle" wx:for-item="item" style="top:{{item.topCircle}}rpx;left:{{item.leftCircle}}rpx;background-color: {{(index%2==0)?colorCircleFirst:colorCircleSecond}};"></view>
+    <view class="container-in">
+      <view class="content-out" wx:for="{{awardList}}" wx:key="award" wx:for-item="item" style="top:{{item.topAward}}rpx;left:{{item.leftAward}}rpx;background-color: {{(index==indexSelect)?colorAwardSelect:colorAwardDefault}};">
+        <image class="award-image" src="{{item.imageAward}}"></image>
+      </view>
+
+      <!-- start button && form -->
+      <form bindsubmit="saveFormId" report-submit="true">
+        <button class="start-btn" formType="submit" wx:if="{{drawQuota !== 0}}" style=" background-color:{{isRunning?'#f88449':'#ed601a'}}" bindtap="startGame"> START
+        </button>
+        <button class="invalid-btn" formType="submit" wx:if="{{drawQuota === 0}}"> START</button>
+      </form>
+
+    </view>
+  </view>
+  <view class="quota">今天剩余抽奖次数: {{drawQuota}}</view>
+
+  <!-- 客服 button&form -->
+
+  <form bindsubmit="saveFormId" report-submit="true">
+    <button open-type="contact" class="customer-service {{existValidFormId ? 'existing':''}}" session-from="weapp" formType="submit">
+      <image src="/images/service.png"></image>
+    </button>
+  </form>
+</view>

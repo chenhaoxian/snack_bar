@@ -1,0 +1,35 @@
+<view>
+
+  <block wx:for="{{orders}}" wx:key="id" wx:for-item="item" wx:if="{{orders.length>0}}">
+    <view class="order-box">
+      <view class="order-header">
+        <view>
+          <image src='/images/location.png' class='order-location'></image>
+          <text>位置: {{item.location}}</text>
+        </view>
+        <text class="order-header-time">下单时间: {{item.created_date}}</text>
+      </view>
+
+      <view class="order-item" wx:for="{{item.snack_list}}" wx:key="name" wx:for-item="prod">
+        <view class="prod-name">{{prod.snack_name}}
+          <view class="prod-amount">{{prod.snack_price}}  × {{prod.amount}}</view>
+        </view>
+        <view class="prod-price">¥ {{prod.snack_price*prod.amount}}</view>
+      </view>
+
+      <view class="order-total">
+        共{{item.total_amount}}件商品　合计: ¥
+        <text class="total-price">{{item.total_price}}</text>
+      </view>
+      <!-- <view class="pay-view"><button  bindtap='pay' class="pay-button">支付完成</button></view>
+      </view>   -->
+    </view>
+  </block>
+
+  <block wx:if="{{orders.length===0}}">
+  <view class="notFound">
+  <image src="/images/404.png" class="notFoundImage"></image>
+    </view>
+  <view class="text2"><text>哇哦,你还没有订单哦</text></view>
+  </block>
+</view>

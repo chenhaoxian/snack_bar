@@ -1,0 +1,22 @@
+stages:
+  - deploy
+
+variables:
+  DEV_RSYNC_PATH: /data/snack_bar/snack_bar
+
+deploy_server:
+  stage: deploy
+  only:
+    - tags
+    - master
+    - web
+    - triggers
+  script:
+    - rsync -av --delete-after . $DEV_RSYNC_PATH
+    - chmod -R 755 $DEV_RSYNC_PATH 
+    - chown -R gitlab-runner:gitlab-runner $DEV_RSYNC_PATH
+    - find $DEV_RSYNC_PATH -type f -exec chmod 644 {} \;
+    - cd $DEV_RSYNC_PATH
+    - time eval `head -1 Dockerfile-server | tr "#" " "`
+    - docker-compose up -d
+

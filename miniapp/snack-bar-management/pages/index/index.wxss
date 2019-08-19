@@ -1,0 +1,177 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+}
+
+.index-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.index-container {
+  padding-top: 40rpx;
+}
+
+ .customer-service {
+  position: fixed;
+  top: 40rpx;
+  right: 40rpx;
+  border-radius: 6px;
+  line-height: 70rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+} 
+
+.existing{
+  background-color: #E0FFFF;
+}
+
+.customer-service image {
+  width: 45rpx;
+  height: 45rpx;
+  vertical-align: middle;
+}
+
+.wlc-name {
+  color: #7a4700;
+  font-size: 32rpx;
+  margin-left: 40rpx;
+}
+
+.wlc-msg {
+  color: #7a4700;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+}
+
+.quota {
+  text-align: center;
+  margin-top: 40rpx;
+  color: #fff;
+  font-size: 32rpx;
+  z-index: 10;
+}
+
+.btn {
+  background: transparent;
+  border: none !important;
+  font-size: 0;
+}
+
+/* 抽奖盘 */
+
+.container-out {
+  height: 600rpx;
+  width: 650rpx;
+  background-color: #b136b9;
+  margin: 100rpx auto 60rpx auto;
+  border-radius: 12rpx;
+  box-shadow: 0 6px 0 #df5cef;
+  position: relative;
+}
+
+.container-in {
+  width: 580rpx;
+  height: 530rpx;
+  background-color: #df5cef;
+  border-radius: 12rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/**小圆球*/
+
+.circle {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: 20rpx;
+  width: 20rpx;
+}
+
+.content-out {
+  position: absolute;
+  height: 155rpx;
+  width: 166.6666rpx;
+  background-color: #f5f0fc;
+  border-radius: 4rpx;
+}
+
+
+
+
+/**居中 加粗*/
+
+.start-btn {
+  position: absolute;
+  margin: auto;
+  top: 5rpx;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 8rpx solid #e81b05;
+  height: 160rpx;
+  width: 160rpx;
+  background-color: #ed601a;
+  color: #fff;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bolder;
+  line-height: 150rpx;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.invalid-btn {
+  position: absolute;
+  margin: auto;
+  top: 5rpx;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 8rpx solid #808080;
+  height: 160rpx;
+  width: 160rpx;
+  background-color: #acacac;
+  color: #fff;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bolder;
+  line-height: 150rpx;
+  padding-left: 0px;
+  padding-right: 0px;
+  cursor: not-allowed;
+}
+
+.award-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 135rpx;
+  width: 145rpx;
+}
+
+/* 授权 */
+.auth-btn{
+  margin-top: 360rpx;
+  width: 360rpx;
+  height: 88rpx;
+  border: 1px solid #6495ED;
+  font-size:28rpx;
+  color: #6495ED;
+  border-radius: 50rpx;
+  line-height: 3
+}

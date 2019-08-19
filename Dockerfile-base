@@ -1,0 +1,31 @@
+#docker build -f Dockerfile-base -t server-app-base:latest .
+FROM python:3.6-slim
+MAINTAINER Stark Xiao <stark.xiao@cargsmart.com>
+
+RUN apt-get -y update
+RUN apt-get install -y --fix-missing \
+    build-essential \
+    cmake \
+    gfortran \
+    git \
+    wget \
+    curl \
+    graphicsmagick \
+    libgraphicsmagick1-dev \
+    libatlas-dev \
+    libavcodec-dev \
+    libavformat-dev \
+    libgtk2.0-dev \
+    libjpeg-dev \
+    liblapack-dev \
+    libswscale-dev \
+    pkg-config \
+    python3-dev \
+    python3-numpy \
+    software-properties-common \
+    zip \
+    && apt-get clean && rm -rf /tmp/* /var/tmp/*
+
+RUN mkdir -p /app && \
+    pip3 install pipenv && \
+    pip3 install face_recognition

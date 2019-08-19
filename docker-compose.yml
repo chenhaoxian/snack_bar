@@ -1,0 +1,38 @@
+# docker-compose for server
+---
+version: "2"
+services:
+  face_rec_redis:
+    restart: always
+    image: redis:4-alpine
+    volumes:
+      - "./infra_docker/redis/redis.conf:/etc/redis/redis.conf"
+    ports:
+      - "16379:6379/tcp"
+    command:
+       redis-server /etc/redis/redis.conf --appendonly yes
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+  face_rec_mongo:
+    restart: always
+    image: mongo:latest
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+  face_rec_server:
+    restart: always
+    image: server-app:latest
+    ports:
+      - "5000:5000/tcp"
+    command:
+      gunicorn -b 0.0.0.0:5000 restful.ServerApp:app --access-logfile -  --error-logfile -
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
